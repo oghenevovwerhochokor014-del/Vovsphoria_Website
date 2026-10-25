@@ -1,0 +1,316 @@
+
+/* GENERAL STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 80px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    background-color: rgb(244, 255, 251);
+    line-height: 1.6;
+}
+
+
+/* HEADER AND NAVIGATION BAR */
+
+.navbar {
+    background-color: rgb(127, 255, 212);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    min-height: 70px;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    color: rgb(23, 75, 64);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: rgb(23, 75, 64);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(38, 122, 100);
+}
+
+
+/* PET NAVIGATION */
+
+#pet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.puppies,
+.kittens,
+.bunnies {
+    display: block;
+    background-color: rgb(216, 255, 240);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(23, 75, 64);
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.puppies:hover,
+.kittens:hover,
+.bunnies:hover {
+    background-color: rgb(75, 191, 154);
+    color: rgb(255, 255, 255);
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* ABOUT HEADER */
+
+.about-header {
+    max-width: 1000px;
+    margin: 20px auto 35px;
+    padding: 40px 30px;
+    background-color: rgb(216, 255, 240);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.about-header h1 {
+    color: rgb(23, 75, 64);
+    font-size: 38px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: rgb(38, 122, 100);
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.about-header p {
+    font-size: 17px;
+}
+
+
+/* CONTENT SECTIONS */
+
+.content-section {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.content-section h2 {
+    color: rgb(23, 75, 64);
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(75, 191, 154);
+}
+
+.content-section p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+
+/* ANIMAL INFORMATION CARDS */
+
+.animal-card {
+    background-color: rgb(244, 255, 251);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid rgb(75, 191, 154);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.animal-card:last-child {
+    margin-bottom: 0;
+}
+
+.animal-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.animal-card h3 {
+    color: rgb(38, 122, 100);
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.animal-card p {
+    margin-bottom: 0;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(23, 75, 64);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 900px) {
+
+    body {
+        padding-top: 140px;
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #pet {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .puppies,
+    .kittens,
+    .bunnies {
+        padding: 10px 15px;
+    }
+
+    .about-header h1 {
+        font-size: 32px;
+    }
+
+    .content-section {
+        padding: 25px;
+    }
+}
+
+
+/* SMALL PHONE SCREENS */
+
+@media (max-width: 500px) {
+
+    body {
+        padding-top: 170px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .navbar {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    #pet {
+        gap: 8px;
+    }
+
+    .puppies,
+    .kittens,
+    .bunnies {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .about-header {
+        padding: 25px 18px;
+        margin-top: 10px;
+    }
+
+    .about-header h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .about-header p {
+        font-size: 15px;
+    }
+
+    .content-section {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .content-section h2 {
+        font-size: 24px;
+    }
+
+    .animal-card {
+        padding: 15px;
+    }
+
+    .animal-card h3 {
+        font-size: 19px;
+    }
+
+    .content-section p {
+        font-size: 15px;
+    }
+}

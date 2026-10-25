@@ -1,0 +1,247 @@
+
+  * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding-top: 70px;
+      background-color: rgb(244, 255, 251);
+      font-family: Arial, sans-serif;
+      color: rgb(51, 51, 51);
+    }
+
+    /* Navigation bar */
+    .navbar {
+      background-color: aquamarine;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 12px 30px;
+      width: 100%;
+      min-height: 65px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo {
+      color: rgb(23, 75, 64);
+      font-size: 25px;
+      font-weight: bold;
+      font-family: cursive;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: rgb(23, 75, 64);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    /* Search bar */
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    .search {
+      width: 180px;
+      padding: 9px 12px;
+      color: rgb(23, 75, 64);
+      font-family: Arial, sans-serif;
+      border: 1px solid rgb(75, 191, 154);
+      border-radius: 20px;
+      outline: none;
+      background-color: white;
+    }
+
+    .search:focus {
+      border-color: rgb(38, 122, 100);
+    }
+
+    /* Page introduction */
+    .page-intro {
+      text-align: center;
+      background-color: rgb(216, 255, 240);
+      padding: 35px 20px;
+      margin: 20px 30px 35px;
+      border-radius: 12px;
+    }
+
+    .page-intro h1 {
+      color: rgb(23, 75, 64);
+      font-size: 32px;
+      margin: 0 0 12px;
+    }
+
+    .page-intro p {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* Dog breeds grid */
+    #dog-section {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 30px;
+      padding: 0 30px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Individual dog cards */
+    .dog-container {
+      margin: 0;
+      padding: 15px;
+      background-color: white;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .dog-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .dog-container > a {
+      display: block;
+    }
+
+    .dog-image {
+      display: block;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .dog-container figcaption {
+      margin-top: 15px;
+    }
+
+    .dog-button {
+      background-color: rgb(216, 255, 240);
+      border: none;
+      border-radius: 6px;
+      padding: 10px 12px;
+      text-decoration: none;
+      display: inline-block;
+      color: rgb(23, 75, 64);
+      font-weight: bold;
+      font-size: 14px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dog-button:hover {
+      background-color: rgb(75, 191, 154);
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      background-color: rgb(23, 75, 64);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    /* Tablets */
+    @media (max-width: 1000px) {
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      body {
+        padding-top: 115px;
+      }
+
+      #dog-section {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    /* Smaller tablets and phones */
+    @media (max-width: 700px) {
+      body {
+        padding-top: 150px;
+      }
+
+      .navbar {
+        padding: 10px 15px;
+        gap: 12px;
+      }
+
+      .logo {
+        font-size: 22px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .search {
+        width: 220px;
+      }
+
+      #dog-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        padding: 0 15px 30px;
+      }
+
+      .page-intro {
+        margin: 15px;
+        padding: 25px 15px;
+      }
+
+      .page-intro h1 {
+        font-size: 27px;
+      }
+
+      .dog-image {
+        height: 170px;
+      }
+    }
+
+    /* Small phones */
+    @media (max-width: 400px) {
+      body {
+        padding-top: 180px;
+      }
+
+      #dog-section {
+        grid-template-columns: 1fr;
+      }
+
+      .dog-image {
+        height: 230px;
+      }
+
+      .nav-links {
+        gap: 10px;
+      }
+    }

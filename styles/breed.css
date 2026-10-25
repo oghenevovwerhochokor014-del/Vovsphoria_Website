@@ -1,0 +1,254 @@
+
+/* GENERAL STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 80px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    background-color: rgb(244, 255, 251);
+    line-height: 1.6;
+}
+
+
+/* HEADER AND NAVIGATION BAR */
+
+.navbar {
+    background-color: rgb(127, 255, 212);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    min-height: 70px;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    color: rgb(23, 75, 64);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: rgb(23, 75, 64);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(38, 122, 100);
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    padding: 20px;
+}
+
+.breed-container {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+
+/* BREED INTRODUCTION */
+
+.breed-header {
+    background-color: rgb(216, 255, 240);
+    padding: 35px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.breed-header h1 {
+    color: rgb(23, 75, 64);
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.breed-header p {
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+
+/* BREED INFORMATION SECTIONS */
+
+.breed-section {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.breed-section h2 {
+    color: rgb(23, 75, 64);
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(75, 191, 154);
+}
+
+.breed-section h3 {
+    color: rgb(38, 122, 100);
+}
+
+.breed-section p {
+    margin-bottom: 15px;
+}
+
+.breed-section ul {
+    padding-left: 25px;
+}
+
+.breed-section li {
+    margin-bottom: 10px;
+}
+
+.breed-section li::marker {
+    color: rgb(75, 191, 154);
+}
+
+
+/* FUN FACTS */
+
+.fun-facts {
+    background-color: rgb(216, 255, 240);
+    border-left: 5px solid rgb(75, 191, 154);
+}
+
+.fun-facts h2 {
+    border-bottom-color: rgb(75, 191, 154);
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(23, 75, 64);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* TABLET RESPONSIVENESS */
+
+@media (max-width: 800px) {
+
+    body {
+        padding-top: 130px;
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .breed-header {
+        padding: 25px;
+    }
+
+    .breed-header h1 {
+        font-size: 30px;
+    }
+
+    .breed-section {
+        padding: 25px;
+    }
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 500px) {
+
+    body {
+        padding-top: 150px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .navbar {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .breed-container {
+        margin: 10px auto;
+    }
+
+    .breed-header {
+        padding: 22px 18px;
+    }
+
+    .breed-header h1 {
+        font-size: 27px;
+    }
+
+    .breed-header p {
+        font-size: 15px;
+    }
+
+    .breed-section {
+        padding: 20px;
+        margin-bottom: 18px;
+    }
+
+    .breed-section h2 {
+        font-size: 23px;
+    }
+
+    .breed-section p,
+    .breed-section li {
+        font-size: 15px;
+    }
+}
